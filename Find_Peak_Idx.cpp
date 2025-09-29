@@ -20,22 +20,6 @@ using namespace std;
 
 class Solution {
     public:
-    int BruteForce(vector<int>& nums) {
-        int peak = INT32_MIN, peakIdx = -1;
-
-        // edge case
-        if (nums.size() == 1) return 0;
-
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] > peak) {
-                peak = nums[i];
-                peakIdx = i;
-            }
-        }
-
-        return peakIdx;
-    }
-
     int BinarySearchApproach(vector<int>& nums) {
         int left = 0, right = nums.size()-1;
 
